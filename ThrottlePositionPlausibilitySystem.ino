@@ -1,3 +1,29 @@
+/*
+ * ============================================================================
+ * APPS/TPS Plausibility Monitor v1.0.0
+ * ============================================================================
+ * 
+ * Motorsport safety monitor for redundant Accelerator Pedal Position Sensors
+ * (APPS) and Throttle Position Sensors (TPS). Detects sensor failures and
+ * prevents runaway throttle conditions per FSAE/Formula Student regulations.
+ * 
+ * Hardware Pins:
+ *   D2  - ETB control output (HIGH=on, LOW=shutdown)
+ *   D7  - Ignition control output (HIGH=on, LOW=shutdown)
+ *   A4  - TPS main sensor (0-5V)
+ *   A5  - TPS track sensor (0-5V, inverted)
+ *   A6  - APPS main sensor (0-5V)
+ *   A7  - APPS track sensor (0-5V, inverted)
+ * 
+ * Author: s0Appy
+ * Repository: https://github.com/s0Appy/Throttle-Position-Plausibility-System
+ * License: MIT (see LICENSE file)
+ * 
+ * ⚠️  SAFETY CRITICAL CODE - DO NOT DEPLOY WITHOUT THOROUGH TESTING ⚠️
+ * See README.md for full documentation and safety requirements.
+ * ============================================================================
+ */
+
 ////////// DEBUG ///////////////////
 unsigned long lastDebug = 0;
 const unsigned long debugInterval = 50;  // 50 ms = 20 Hz
